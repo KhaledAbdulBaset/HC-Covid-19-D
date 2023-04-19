@@ -5,6 +5,9 @@ import numpy as np
 
 app = Flask(__name__)
 
+if __name__ == '__main__':
+    app.run(debug=True)
+
 def preprossing(image):
     image=Image.open(image)
     image = image.resize((224, 224))
@@ -67,7 +70,3 @@ def predict():
         return render_template('index.html', prediction=prediction1, image='static/IMG/', appName="Intel Image Classification")
     else:
         return render_template('index.html',appName="Intel Image Classification")
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
