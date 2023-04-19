@@ -2,8 +2,8 @@ gunicorn
 flask
 keras
 tensorflow==2.11
-CUDA==11.2
-cuDNN==8.1
+cuda==11.2
+cudnn==8.1
 pillow
 numpy
 protobuf==3.9.4
